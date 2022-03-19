@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt
+">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Horas Extras </title>
+    <link rel="stylesheet" href="horasextras.css">
+    <script src="horasextras.js"></script>
+</head>
+<body>
+    <header><h1> Cálculo de Horas extras no Japão </h1>
+    </header>
+    <script >
+ 
+ function UpdateUI(){
+     
+     let horaNormal      = Number(document.getElementById('horatxt').value)
+     let horas           = Number(document.getElementById('qntxt').value)
+     let diasTrabalhados = Number(document.getElementById('diastxt').value)
+
+     let resultado     = document.getElementById('res')
+     let salarioNormal = document.getElementById('saltxt')
+     let total         = document.getElementById('totaltxt')
+
+     let calculaRes = new Calcular ( horaNormal, horas, diasTrabalhados )
+
+
+resultado.innerHTML     = calculaRes.totaldeHEx()
+salarioNormal.innerHTML = calculaRes.salario()
+total.innerHTML         = calculaRes.salarioMensal()
+
+ }
+
+
+
+    </script>
+    <section>
+        <div>
+        
+        <p>Sálario por Hora:<input type="number" name="horatxt"  id="horatxt"> &yen;</p>
+    
+        <p> Quantidade de Horas Extras: <input type="number" name="qntxt" id="qntxt"></p>
+
+        <p>Dias trabalhados: <input type="number" name="diastxt" id="diastxt"></p>
+        
+        <p><input type="button" value="Calcular" onclick="UpdateUI()"></p>
+    
+    </div>
+    </section> <br>
+    
+    <section>
+    <p>Valor Extra: <output type='number' name="res" id="res"></output> &yen;</p>
+    <p>Sálario Normal: <output type= 'number' name="saltxt" id="saltxt"></output>&yen;</p>
+    <br>
+    <p>Total:&#128180;<output type='number' name="totaltxt" id="totaltxt"></output>&yen;</p>
+    </section> 
+    
+
+
+
+
+
+
+
+    
+</body>
+</html>

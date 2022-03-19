@@ -1,0 +1,25 @@
+body{
+    background: rgb(5, 85, 122);
+    font: normal 18pt Arial;
+}
+header{
+    color: white;
+    text-align: center;
+    font-style: oblique;
+   
+}
+section{
+    background: white;
+    color: rgb(0, 0, 0);
+    font-size: small;
+    text-align: left;
+    border-radius: 50px;
+    padding: 20px;
+    width:350px ;
+    margin: auto;
+    box-shadow:10px 10px 20px rgba(0, 0, 0, 0.61);
+    
+}
+
+
+
